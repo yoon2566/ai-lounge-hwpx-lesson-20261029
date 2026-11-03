@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 셰르파와 함께하는 AI 활용</title>
+  <link rel="stylesheet" href="styles.css?v=practice-45-20261029">
+  <script src="presenter.js?v=practice-45-20261029-2" defer></script>
+</head>
+<body>
+  <main id="viewport" aria-label="슬라이드 발표 화면">
+    <div id="slide-frame">
+      <!-- 내용과 순서는 이 파일에서 직접 편집합니다. section 하나가 한 장입니다. -->
+      <!-- 01 AI 셰르파와 함께하는 AI 활용 -->
+      <section class="slide cover" aria-labelledby="s01">
+        <h1 id="s01">AI 셰르파와 함께하는<br>AI 활용</h1>
+        <p class="lead">필요한 문서를 AI와 함께 만들고<br>직접 읽고 고칩니다.</p>
+      </section>
+
+      <!-- 02 함께 배울 내용 -->
+      <section class="slide" aria-labelledby="s02" hidden>
+        <h2 id="s02">목차</h2>
+        <ol class="contents toc-main toc-expanded">
+          <li>한글 문서
+            <ol class="toc-sub">
+              <li>배경</li>
+              <li>개념 이해</li>
+              <li>실습 준비</li>
+              <li>HWPX 수정 스킬 준비</li>
+              <li>실습 1 · 동아리 소개서</li>
+              <li>실습 2 · 등록신청서·회원명단</li>
+              <li>실습 3 · 활동실적서·사진</li>
+              <li>실습 4 · 지원사업 신청서</li>
+              <li>실습 5 · 사업계획서</li>
+              <li>실습 6 · 예산표</li>
+              <li>문서 확인·공유</li>
+              <li>동아리 신청 안내</li>
+              <li>HWP 변환·결과 확인</li>
+            </ol>
+          </li>
+          <li>구글 시트 <span class="toc-pages">21–29쪽</span>
+            <ol class="toc-sub">
+              <li>배경</li><li>세 가지 개념·준비</li>
+              <li>Google Drive 연결 확인</li><li>이미지 젠으로 양식 시안</li>
+              <li>항목·배치·색상 수정</li><li>수정 가능한 구글 시트 제작</li>
+              <li>가상 품목 입력·자동 계산</li><li>인쇄 확인·다른 양식 응용</li>
+            </ol>
+          </li>
+          <li>PPT <span class="toc-pages">30–43쪽</span>
+            <ol class="toc-sub">
+              <li>배경</li><li>발표 계획과 페이지별 내용</li>
+              <li>2×2 디자인 미리보기</li><li>디자인 수정·PNG 저장</li>
+              <li>발표 내용·디자인 확정</li><li>HTML 제작·로컬 서버 실행</li>
+              <li>브라우저 수정·최종 확정</li><li>이미지 템플릿 등록·사용</li>
+              <li>페이지별 이미지 생성·검수</li>
+            </ol>
+          </li>
+        </ol>
+        <p class="footnote toc-next">이후 주제 · 4. 간단한 웹앱 만들기　5. 웹앱에 외부 서비스를 연결하기</p>
+      </section>
+
+      <!-- 03 Codex와 한글 문서 -->
+      <section class="slide cover" aria-labelledby="s03" hidden>
+        <p class="eyebrow">챕터 1 · 한글 문서</p>
+        <h2 id="s03">Codex와 한글 문서</h2>
+        <p class="lead">함께 AI를 배우는 동아리를 만들어봅시다.</p>
+        <p>동아리를 만들고 운영하는 데 필요한 문서를 준비합니다.</p>
+      </section>
+
+      <!-- 04 김영희 어르신의 동아리 만들기 -->
+      <section class="slide" aria-labelledby="s04" hidden>
+        <p class="eyebrow">배경</p><h2 id="s04">김영희 어르신의 동아리 만들기</h2>
+        <div class="story">
+          <p>68세 김영희 어르신은 AI를 배워 생활에 활용하고 싶습니다.<br>이웃과 함께 배우면 더 재미있고, 오래 이어갈 것 같습니다.</p>
+          <p>평생학습관에서 동아리 등록과 지원사업 안내를 보았습니다.<br>자료를 찾고 한글 서류를 쓰는 일이 막막합니다.</p>
+          <p>모두의AI라운지를 찾아 AI 셰르파와 함께<br>Codex로 필요한 한글 문서를 만들어보기로 합니다.</p>
+        </div>
+        <p class="footnote">김영희 어르신과 동아리는 수업을 위해 만든 가상의 사례입니다.</p>
+      </section>
+
+      <!-- 05 어떤 문서를 만들까요? -->
+      <section class="slide" aria-labelledby="s05" hidden>
+        <p class="eyebrow">개념 이해</p><h2 id="s05">어떤 문서를 만들까요?</h2>
+        <table>
+          <thead><tr><th>할 일</th><th>만들 문서</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">동아리 조직하기</th><td>① 동아리 소개서<br>② 동아리 등록신청서·회원명단</td></tr>
+            <tr><th scope="row">활동 기록하기</th><td>③ 동아리 활동실적서·사진</td></tr>
+            <tr><th scope="row">지원 신청 준비하기</th><td>④ 지원사업 신청서　⑤ 사업계획서　⑥ 예산표</td></tr>
+          </tbody>
+        </table>
+        <p class="goal"><strong>학습 목표</strong> 필요한 문서를 알고, 모임 정보로 초안을 만든 뒤<br>양식에 맞게 고치고 확인할 수 있습니다.</p>
+        <p class="footnote">동아리 등록과 지원사업 신청은 별개입니다. 이번 실습에서는 실제 접수하지 않습니다.</p>
+      </section>
+
+      <!-- 06 실습 폴더와 Codex 설정 준비하기 -->
+      <section class="slide" aria-labelledby="s06" hidden>
+        <p class="eyebrow">실습 준비</p><h2 id="s06">실습 폴더와 Codex 설정 준비하기</h2>
+        <ol class="actions">
+          <li>바탕화면에 ‘AI동아리실습’ 폴더를 만듭니다.</li>
+          <li>Codex에서 프로젝트를 만들고 이 폴더를 연결합니다.</li>
+          <li>연결한 폴더가 바탕화면의 ‘AI동아리실습’인지 확인합니다.</li>
+        </ol>
+        <h3>실습 전 설정 · 모두의AI라운지</h3>
+        <table class="compact-table">
+          <tbody>
+            <tr><th scope="row">모델</th><td>GPT-6.1 Sol</td></tr>
+            <tr><th scope="row">추론 수준</th><td>Medium(중간)</td></tr>
+            <tr><th scope="row">권한</th><td>전체 액세스</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 07 HWPX 수정 스킬 준비하기 -->
+      <section class="slide" aria-labelledby="s07" hidden>
+        <p class="eyebrow">문서 작성 준비</p><h2 id="s07">HWPX 수정 스킬 준비하기</h2>
+        <p>준비된 HWPX 양식을 읽고 고쳐서 저장할 스킬을 준비합니다.</p>
+        <p class="resource"><a href="https://github.com/yoon2566/yoon_hwpx_3" target="_blank" rel="noopener">github.com/yoon2566/yoon_hwpx_3</a></p>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>skill-installer로 https://github.com/yoon2566/yoon_hwpx_3<br>저장소 루트의 스킬을 ‘yoon-hwpx-3’ 이름으로 설치해줘.<br>필요한 실행 도구를 준비하고 스킬 인식을 확인해줘.<br>이미 설치되어 있으면 확인만 해줘.</p>
+        </div>
+        <p class="note">설치 후 Codex의 ‘스킬’ 목록에서 이름을 확인합니다.<br>보이지 않으면 새 대화를 열거나 Codex를 재시작합니다.</p>
+      </section>
+
+      <!-- 08 동아리 소개서 작성하기 -->
+      <section class="slide practice" aria-labelledby="s08" hidden>
+        <p class="eyebrow">실습 1 · 동아리 소개서</p><h2 id="s08">동아리 소개서 작성하기</h2>
+        <p><a href="자료/교육용양식/01_동아리 소개서.hwpx" download>동아리 소개서 양식 받기</a></p>
+        <ol class="actions"><li>소개서 파일을 Codex 입력창에 첨부하고 아래 요청을 보냅니다.</li><li>새 파일을 열어 가상 데이터와 표를 확인합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 HWPX 소개서에 가상 데이터를 채워줘.<br>우리동네 AI 배움동아리, 김영희 포함 8명, 월 2회·2시간이야.<br>AI로 생활문서를 배우고 이웃과 나누는 모임이야. 가상 장소는 이웃배움방이야.<br>나머지 항목도 가상 정보로 채우고 ‘교육용 가상 자료’라고 표시해줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_1_동아리소개서.hwpx’로 저장해줘.</p>
+        </div>
+      </section>
+
+      <!-- 09 등록신청서와 회원명단 작성하기 -->
+      <section class="slide practice" aria-labelledby="s09" hidden>
+        <p class="eyebrow">실습 2 · 등록신청서와 회원명단</p><h2 id="s09">등록신청서와 회원명단 작성하기</h2>
+        <p><a href="자료/교육용양식/02_동아리 등록신청서.hwpx" download>② 동아리 등록신청서 받기</a></p>
+        <ol class="actions"><li>양식을 내려받아 Codex 입력창에 첨부하고 아래 요청을 보냅니다.</li><li>작성본에서 기본정보와 회원명단 8명을 확인합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 HWPX 등록신청서에 가상 데이터를 채워줘.<br>우리동네 AI 배움동아리, 김영희 포함 8명, 월 2회·2시간, 이웃배움방이야.<br>회원명단 8명을 가상 이름으로 채우고 앞 문서와 정보를 맞춰줘.<br>‘교육용 가상 자료’로 표시하고 연락처는 010-0000-0000, 서명은 비워줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_2_동아리등록신청서.hwpx’로 저장해줘.</p>
+        </div>
+        <p class="footnote">가상 이름과 예시 연락처로 작성합니다. 실제 접수에는 기관의 정식 양식을 확인합니다.</p>
+      </section>
+
+      <!-- 10 활동실적서에 내용과 사진 넣기 -->
+      <section class="slide practice" aria-labelledby="s10" hidden>
+        <p class="eyebrow">실습 3 · 동아리 활동실적서</p><h2 id="s10">활동실적서에 내용과 사진 넣기</h2>
+        <p><a href="자료/교육용양식/03_동아리 활동실적서.hwpx" download>활동실적서 양식</a> · <a href="사진예제/사진예제_2종.zip" download>사진 예제 2장</a></p><ol class="actions"><li>양식과 사진 2장을 내려받아 Codex 입력창에 함께 첨부합니다.</li><li>아래 요청을 보내고 작성본의 내용·사진·설명을 확인합니다.</li></ol><div class="prompt"><h3>예시 프롬프트</h3><p>yoon-hwpx-3로 첨부한 HWPX 활동실적서에 가상 데이터를 채워줘.<br>우리동네 AI 배움동아리 8명이 이웃배움방에서 소개서와 등록신청서를 연습했어.<br>가상 활동일은 2026.11.5.와 11.19., 각 2시간이야. 내용도 가상으로 써줘.<br>첨부한 사진 2장과 설명을 넣고 ‘교육용 가상 활동·사진’으로 표시해줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_3_동아리활동실적서.hwpx’로 저장해줘.</p></div><p class="footnote">사진 ZIP을 풀어 PNG 파일 2장을 첨부합니다. 교육용 가상 기록이며 실제 실적으로 제출하지 않습니다.</p>
+      </section>
+
+      <!-- 11 지원사업 신청서 작성하기 -->
+      <section class="slide practice" aria-labelledby="s11" hidden>
+        <p class="eyebrow">실습 4 · 지원사업 신청서</p><h2 id="s11">지원사업 신청서 작성하기</h2>
+        <p><a href="자료/교육용양식/04_지원사업 신청서.hwpx" download>④ 지원사업 신청서 받기</a></p>
+        <ol class="actions"><li>양식을 내려받아 Codex 입력창에 첨부하고 아래 요청을 보냅니다.</li><li>작성본에서 사업명·동아리명·인원을 확인합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 HWPX 지원사업 신청서에 가상 데이터를 채워줘.<br>우리동네 AI 배움동아리 8명, 사업명은 ‘이웃과 AI 배우기’야.<br>가상 기간은 2026.11.1.~12.31., 장소는 이웃배움방, 신청금은 4만원이야.<br>등록 상태는 준비 중으로 쓰고 나머지도 가상 정보로 채워 ‘교육용’으로 표시해줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_4_지원사업신청서.hwpx’로 저장해줘.</p>
+        </div>
+      </section>
+
+      <!-- 12 사업계획서 작성하기 -->
+      <section class="slide practice" aria-labelledby="s12" hidden>
+        <p class="eyebrow">실습 5 · 사업계획서</p><h2 id="s12">사업계획서 작성하기</h2>
+        <p><a href="자료/교육용양식/05_사업계획서.hwpx" download>⑤ 사업계획서 받기</a></p>
+        <ol class="actions"><li>양식을 내려받아 Codex 입력창에 첨부하고 아래 요청을 보냅니다.</li><li>신청서와 사업명·기간·인원이 같은지 확인합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 HWPX 사업계획서에 가상 데이터를 채워줘.<br>‘이웃과 AI 배우기’: 김영희 등 8명, 2026.11.~12., 월 2회·2시간이야.<br>가상 장소는 이웃배움방이야. 생활문서·표·발표자료 배우기와 이웃 나눔을 계획해줘.<br>일정·역할도 가상으로 정하고 신청서와 맞춰 ‘교육용 가상 자료’로 표시해줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_5_사업계획서.hwpx’로 저장해줘.</p>
+        </div>
+        <p class="footnote">신청서와 사업명·기간·인원을 같게 적습니다. 목표는 실제로 한 활동과 구분합니다.</p>
+      </section>
+
+      <!-- 13 예산표 작성하기 -->
+      <section class="slide practice" aria-labelledby="s13" hidden>
+        <p class="eyebrow">실습 6 · 예산표</p><h2 id="s13">예산표 작성하기</h2>
+        <p><a href="자료/교육용양식/06_예산표.hwpx" download>⑥ 예산표 받기</a></p>
+        <ol class="actions"><li>양식을 내려받아 Codex 입력창에 첨부하고 아래 요청을 보냅니다.</li><li>합계가 4만원인지 확인하고 신청서 금액도 맞춥니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 HWPX 예산표에 가상 데이터를 채워줘.<br>‘이웃과 AI 배우기’의 교재 5,000원×8권, 지원금 4만원·자체부담 0원이야.<br>나머지 비용은 0원으로 쓰고 계산 근거와 합계를 채워 신청서 금액과 맞춰줘.<br>‘교육용 가상 예산’으로 표시하고 실제 지원 가능 여부는 별도 확인으로 적어줘.<br>원본과 표를 보존해 작업 폴더에 ‘작성완료_6_예산표.hwpx’로 저장해줘.</p>
+        </div>
+        <p class="footnote">총사업비 = 지원금 + 자체부담. 자동 합계 수식이 없어 직접 계산해 대조합니다.<br>가상 예산으로 연습하고, 신청서의 금액도 맞춥니다.</p>
+      </section>
+
+      <!-- 14 문서 6개 함께 확인하기 -->
+      <section class="slide" aria-labelledby="s14" hidden>
+        <p class="eyebrow">실습 마무리</p><h2 id="s14">문서 6개 함께 확인하기</h2>
+        <ol class="actions">
+          <li>동아리명, 사업명, 기간, 인원이 문서마다 같은지 봅니다.</li>
+          <li>예산표 합계와 신청서의 지원신청액을 비교합니다.</li>
+          <li>Codex에 파일 검사와 내용 비교를 요청합니다.</li>
+          <li>작성본을 한글에서 다시 열고 표·사진·페이지를 확인합니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 작업 폴더의 ‘작성완료_1_’부터 ‘작성완료_6_’까지 문서를 검사해줘.<br>동아리명·사업명·인원·기간·금액의 불일치와 빈칸을 알려줘.<br>원본은 바꾸지 말고 ‘검사결과.txt’로 저장해줘.</p>
+        </div>
+        <p class="footnote">파일 검사 통과만으로 실제 한글 화면까지 정상이라고 판단하지 않습니다.</p>
+      </section>
+
+      <!-- 15 우리 동아리 문서 소개하기 -->
+      <section class="slide" aria-labelledby="s15" hidden>
+        <p class="eyebrow">공유하기</p><h2 id="s15">우리 동아리 문서 소개하기</h2>
+        <p>작성본을 한글에서 열고 서로 설명해 봅시다.</p>
+        <ol class="share-list">
+          <li>우리 동아리는 무엇을 함께 배우나요?</li>
+          <li>어떤 문서를 만들었나요?</li>
+          <li>AI의 초안에서 직접 고친 부분은 어디인가요?</li>
+          <li>실제 등록이나 신청까지 더 준비할 것은 무엇인가요?</li>
+        </ol>
+      </section>
+
+      <!-- 16 우리 지역의 모집·지원 공고 살펴보기 -->
+      <section class="slide" aria-labelledby="s16" hidden>
+        <p class="eyebrow">더 해보기 · 실제 공고와 공식 문서</p><h2 id="s16">동아리 신청</h2>
+        <p>동아리 모집·등록 안내와 지원사업 공고를 구분해 살펴봅니다.</p>
+        <table class="compact-table region-links">
+          <thead><tr><th>지역</th><th>동아리 모집·등록 안내</th><th>2026년 지원사업 공고</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">강릉시</th><td><a href="https://www.gn.go.kr/gnlll/selectBbsNttView.do?bbsNo=349&amp;key=4402&amp;nttNo=171437" target="_blank" rel="noopener">등록 신청서 양식 (2024.08.21)</a><br>별도 2026년 모집 공고 미확인</td><td><a href="https://www.gn.go.kr/www/selectGosiNttView.do?gosiNttNo=59277&amp;key=263" target="_blank" rel="noopener">우수동아리 활성화 공고</a></td></tr>
+            <tr><th scope="row">원주시</th><td><a href="https://www.wonju.go.kr/envi/selectBbsNttView.do?bbsNo=5&amp;key=2062&amp;nttNo=475588" target="_blank" rel="noopener">2026년 동아리 등록제 안내</a></td><td><a href="https://www.wonju.go.kr/health/selectBbsNttView.do?bbsNo=5&amp;key=1655&amp;nttNo=476334" target="_blank" rel="noopener">지원사업 참여동아리 모집</a></td></tr>
+            <tr><th scope="row">춘천시</th><td><a href="https://clc.chuncheon.go.kr/site/club/regist_info.do" target="_blank" rel="noopener">공식 등록 안내 (연도 미표기)</a></td><td><a href="https://clc.chuncheon.go.kr/site/board/selectBoardArticle.do?bbsId=BBSMSTR_000000000001&amp;nttId=5324" target="_blank" rel="noopener">시민 평생학습동아리 공고</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 17 Codex가 사용할 변환 도구 준비하기 -->
+      <section class="slide" aria-labelledby="s17" hidden>
+        <p class="eyebrow">더 해보기 · 실제 공고와 공식 문서</p><h2 id="s17">Codex가 사용할 변환 도구 준비하기</h2>
+        <ol class="actions">
+          <li>Codex에 rhwp의 공식 GitHub 주소를 알려줍니다.</li>
+          <li>Codex가 내 컴퓨터에 맞는 실행 파일을 준비합니다.</li>
+          <li>준비한 도구가 실행되는지 확인합니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>https://github.com/edwardkim/rhwp 의 변환 도구를<br>현재 작업 폴더에 준비해줘.<br>내 컴퓨터에 맞는 공식 실행 파일을 받고 실행을 확인해줘.<br>이미 있으면 다시 받지 말고 위치와 실행 상태를 알려줘.</p>
+        </div>
+        <p class="footnote">현재 Codex에서 선택한 작업 폴더를 사용합니다.</p>
+      </section>
+
+      <!-- 18 원본을 남기고 HWPX로 변환하기 -->
+      <section class="slide" aria-labelledby="s18" hidden>
+        <p class="eyebrow">더 해보기 · 실제 공고와 공식 문서</p><h2 id="s18">원본을 남기고 HWPX로 변환하기</h2>
+        <ol class="actions">
+          <li>Codex 입력창에 변환할 HWP 파일을 첨부합니다.</li>
+          <li>아래 프롬프트로 작업 폴더에 HWPX 변환본을 만듭니다.</li>
+          <li>이름 앞에 ‘변환_’이 붙은 새 파일을 확인합니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>rhwp를 이용해 첨부한 HWP 파일을 HWPX로 변환해줘.<br>원본은 그대로 두고, 파일 이름 앞에 ‘변환_’을 붙여<br>현재 작업 폴더에 저장해줘.<br>변환 전후 내용·쪽 수·배치 차이도 확인해줘.</p>
+        </div>
+        <p class="footnote">파일 이름의 확장자만 바꾸지 않습니다. 공식 원본은 조사·변환 체험용입니다.</p>
+      </section>
+
+      <!-- 19 변환 전후 내용과 배치 확인하기 -->
+      <section class="slide" aria-labelledby="s19" hidden>
+        <p class="eyebrow">더 해보기 · 실제 공고와 공식 문서</p><h2 id="s19">변환 전후를 눈으로 확인하기</h2>
+        <ol class="actions">
+          <li>원본 HWP와 변환한 HWPX 파일을 각각 엽니다.</li>
+          <li>두 문서를 나란히 놓고 제목, 본문, 표와 사진을 살펴봅니다.</li>
+          <li>빠진 내용, 잘린 표, 줄바꿈과 쪽 수가 달라진 곳을 확인합니다.</li>
+        </ol>
+        <p class="note">파일이 만들어졌는지만 보지 않고, 문서 화면을 직접 확인합니다.</p>
+      </section>
+      <!-- 20 실제 공고 양식에 가상 데이터 넣어보기 -->
+      <section class="slide practice" aria-labelledby="s20" hidden>
+        <p class="eyebrow">더 해보기 · 실제 공고와 공식 문서</p><h2 id="s20">실제 공고 양식에 가상 데이터 넣어보기</h2>
+        <ol class="actions">
+          <li>실제 공고에 첨부된 신청 양식의 HWPX 변환본을 Codex에 첨부합니다.</li>
+          <li>아래 요청을 보내고, 작성본을 열어 내용과 표를 눈으로 확인합니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트</h3>
+          <p>yoon-hwpx-3로 첨부한 실제 신청 양식 HWPX에 가상 데이터를 넣어줘.<br>우리동네 AI 배움동아리, 김영희 포함 8명, 사업명은 ‘이웃과 AI 배우기’야.<br>기간은 2026.11.~12., 월 2회·2시간, 신청금은 4만원으로 채워줘.<br>나머지는 가상 정보로 채우고 ‘교육용 가상 자료’로 표시해줘.<br>공고문만 있고 신청 칸이 없으면 알려줘. 원본과 표는 보존해줘.<br>작업 폴더에 ‘작성완료_7_실제공고양식.hwpx’로 저장해줘.</p>
+        </div>
+      </section>
+      <!-- 21 챕터 2 · 구글 시트 -->
+      <section class="slide cover" aria-labelledby="s21" hidden>
+        <p class="eyebrow">챕터 2 · 구글 시트</p>
+        <h2 id="s21">소상공인의 견적서 만들기</h2>
+        <p class="lead">이미지로 양식을 구상하고<br>셀과 수식으로 완성합니다.</p>
+        <p>시안 만들기 → 구글 시트 제작 → 계산·인쇄 확인</p>
+      </section>
+
+      <!-- 22 박정수 사장님의 인쇄소 -->
+      <section class="slide" aria-labelledby="s22" hidden>
+        <p class="eyebrow">배경</p><h2 id="s22">박정수 사장님의 인쇄소</h2>
+        <div class="story">
+          <p>박정수 사장님은 작은 인쇄소 ‘정수인쇄’를 운영합니다.<br>명함과 전단 주문을 받을 때마다 견적서를 새로 씁니다.</p>
+          <p>품목과 가격을 바꾸다 보면 합계를 잘못 적기도 합니다.<br>고객에게 보여 줄 양식도 깔끔하게 정리하고 싶습니다.</p>
+          <p>AI로 양식 시안을 만든 뒤 구글 시트로 옮겨<br>수량과 단가만 바꾸면 계산되는 견적서를 만듭니다.</p>
+        </div>
+        <p class="footnote">박정수 사장님과 정수인쇄는 수업을 위해 만든 가상의 사례입니다.</p>
+      </section>
+
+      <!-- 23 알아야 할 세 가지 개념 -->
+      <section class="slide" aria-labelledby="s23" hidden>
+        <p class="eyebrow">개념·준비</p><h2 id="s23">알아야 할 세 가지 개념</h2>
+        <table>
+          <thead><tr><th>개념</th><th>뜻과 이번 실습에서 할 일</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">이미지 만들기 · imagegen</th><td>글로 원하는 모습을 설명해 견적서 시안 이미지를 만듭니다.</td></tr>
+            <tr><th scope="row">구글 드라이브 플러그인</th><td>Codex와 Google Drive를 연결해 파일을 읽고 저장합니다.</td></tr>
+            <tr><th scope="row">구글 시트</th><td>셀과 표로 견적서를 만들고 수식으로 금액을 계산합니다.</td></tr>
+          </tbody>
+        </table>
+        <p><strong>준비</strong> Google 계정, Codex, Google Drive 플러그인<br>작업 폴더 ‘견적서실습’을 만들고 Codex 프로젝트로 엽니다.</p>
+        <p class="goal"><strong>목표 결과물</strong> 수정 가능한 구글 시트 견적서 1개와 열기 링크</p>
+        <p class="footnote">견적서 시안 PNG는 다음 실습에서 만듭니다. 완성된 시트는 Google Drive에 저장합니다.</p>
+      </section>
+
+      <!-- 24 Google Drive 연결과 접근 확인 -->
+      <section class="slide practice" aria-labelledby="s24" hidden>
+        <p class="eyebrow">실습 1 · 연동 준비</p><h2 id="s24">Google Drive 연결과 접근 확인</h2>
+        <ol class="actions">
+          <li>Codex의 ‘플러그인’에서 Google Drive를 찾아 설치합니다.</li>
+          <li>연결 안내에 따라 Google 계정과 요청 권한을 확인하고 연결합니다.</li>
+          <li>새 대화를 열고 Google Drive를 선택해 아래 요청을 보냅니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>Google Drive 연결 상태를 확인해줘.<br>연결 계정의 기본 정보를 읽을 수 있는지 확인해줘.<br>현재 도구로 구글 시트 생성·저장과 셀·수식 수정이 가능한지 알려줘.<br>기존 파일은 바꾸지 말고, 연결이나 권한이 부족하면 필요한 단계를 알려줘.</p>
+        </div>
+        <p class="footnote"><strong>팁</strong> 플러그인을 연결한 뒤 연결이 잘 안되면 Codex를 한 번 껐다가 다시 켜 보세요.<br>설치와 계정 연결은 별개입니다. 읽기 성공과 쓰기 도구 지원을 확인하고 진행합니다.<br>계정·관리자 정책에 따라 기능이 제한될 수 있습니다. <a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">OpenAI 공식 연결 안내</a></p>
+      </section>
+
+      <!-- 25 견적서 양식 시안 만들기 -->
+      <section class="slide practice" aria-labelledby="s25" hidden>
+        <p class="eyebrow">실습 2 · 이미지 젠</p><h2 id="s25">견적서 양식 시안 만들기</h2>
+        <p>Codex에서 이미지 젠(imagegen) 스킬을 선택하고 요청합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>imagegen으로 A4 세로 견적서 양식 시안 이미지를 만들어줘.<br>가상 업체 ‘정수인쇄’, 대표 박정수, 연락처 010-0000-0000이야.<br>견적일·견적번호·수신처, 품목·규격·수량·단가·금액, 합계를 넣어줘.<br>흰 바탕, 검은 글씨, 연한 파랑 강조로 읽기 쉽게 만들어줘.<br>‘교육용 가상 견적서’라고 쓰고 표는 5줄로 해줘.<br>완성 이미지를 작업 폴더에 ‘견적서_시안.png’로 저장해줘.</p>
+        </div>
+        <p class="note">결과 확인 · 작업 폴더의 PNG를 열어 업체 정보와 표 항목을 봅니다.</p>
+        <p class="footnote">아직 계산되는 견적서가 아닙니다. 이미지 속 글자·숫자는 직접 검수합니다.</p>
+      </section>
+
+      <!-- 26 시안의 항목과 디자인 고치기 -->
+      <section class="slide practice" aria-labelledby="s26" hidden>
+        <p class="eyebrow">실습 3 · 시안 수정</p><h2 id="s26">시안의 항목과 디자인 고치기</h2>
+        <ol class="actions">
+          <li>품목을 적을 공간, 글자 크기, 합계 위치를 살펴봅니다.</li>
+          <li>시안 이미지를 첨부하고 고칠 부분만 요청합니다.</li>
+        </ol>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>imagegen으로 첨부한 견적서 시안을 수정해줘.<br>품목 칸을 넓히고 업체 연락처 글씨를 키워줘.<br>금액과 합계는 오른쪽에 맞추고, 합계 줄만 연한 파랑으로 해줘.<br>항목과 나머지 배치는 유지해줘.<br>작업 폴더에 ‘견적서_시안_확정.png’로 새로 저장해줘.</p>
+        </div>
+        <p class="note">결과 확인 · 빠진 항목, 잘린 글자, 흐린 색이 없는지 다시 확인합니다.</p>
+      </section>
+
+      <!-- 27 시안에서 실제 구글 시트 만들기 -->
+      <section class="slide practice" aria-labelledby="s27" hidden>
+        <p class="eyebrow">실습 4 · 셀과 수식으로 제작</p><h2 id="s27">시안에서 실제 구글 시트 만들기</h2>
+        <p>‘견적서_시안_확정.png’를 첨부하고 Google Drive를 선택합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>이전에 만든 첨부 견적서 이미지를 바탕으로 구글 시트 견적서를 만들어줘.<br>Google Drive의 ‘내 드라이브’ 최상위에 ‘정수인쇄_교육용견적서’로 저장해줘.<br>이미지의 배치·색을 참고하고, 수정 가능한 셀과 표로 만들어줘.<br>A8:F8은 번호·품목·규격·수량·단가·금액, 9~13행은 입력 칸이야.<br>F9:F13은 수량×단가, F14는 금액 합계 수식을 넣어줘.<br>저장한 시트의 셀·수식을 확인하고 열기 링크를 알려줘.</p>
+        </div>
+        <p class="footnote">현재 도구는 XLSX의 구글 시트 변환·저장, 셀·수식 읽기·수정을 지원합니다.<br>저장 성공과 링크를 확인합니다. 실패하면 오류를 해결한 뒤 진행하며, 로컬 XLSX만으로 완료하지 않습니다.</p>
+      </section>
+
+      <!-- 29 견적서 양식에 가상 데이터 넣기 -->
+      <section class="slide practice" aria-labelledby="s29" hidden>
+        <p class="eyebrow">실습 5 · 가상 데이터 입력·결과 확인</p><h2 id="s29">견적서 양식에 가상 데이터 넣기</h2>
+        <p>만들어진 구글 시트의 링크를 Codex에 붙이고 아래 요청을 보냅니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>이 구글 시트 견적서 양식에 교육용 가상 데이터를 넣어줘.<br>견적일은 오늘, 수신처는 ‘이웃가게’로 해줘.<br>9~11행에 명함·기본형·200개·100원, 전단·A4·100장·200원,<br>포스터·A3·10장·2,000원을 순서대로 넣어줘.<br>기존 디자인과 계산식을 유지하고 합계가 60,000원인지 확인해줘.<br>입력한 내용을 저장하고 시트 링크를 알려줘.</p>
+        </div>
+        <p class="footnote">계산 확인 · 합계 60,000원 → 명함 수량을 300으로 바꾸면 70,000원인지 봅니다.<br>인쇄 확인 · 견적서 영역 선택 → 파일 → 인쇄 → 선택한 셀·A4 세로·페이지에 맞춤으로 봅니다.</p>
+      </section>
+
+      <!-- 31 견적서 결과 확인과 응용 -->
+      <section class="slide practice" aria-labelledby="s31" hidden>
+        <p class="eyebrow">결과 확인·더 해보기</p><h2 id="s31">견적서를 확인하고 다른 양식으로</h2>
+        <ol class="actions"><li>Google Drive에서 시트를 다시 열고 품목을 수정할 수 있나요?</li><li>수량을 바꾸면 금액과 합계가 함께 바뀌나요?</li><li>인쇄 화면에서 제목·표·합계가 한 장에 보이나요?</li></ol>
+        <div class="prompt"><h3>응용 프롬프트 · 주문서</h3>
+          <p>이 견적서의 디자인을 참고해 새 구글 시트 주문서를 만들어줘.<br>주문일·납기일·수령 방법을 추가하고 수량×단가 계산을 넣어줘.<br>교육용 가상 정보로 만들고 원래 견적서는 보존해줘.<br>Google Drive에 저장한 뒤 확인한 링크를 알려줘.</p>
+        </div>
+        <p class="note">다른 응용 · 거래명세서는 거래일·공급 내역, 예산표는 계획·실제·차액을 넣어 봅니다.</p>
+      </section>
+
+      <!-- 32 챕터 3 · PPT -->
+      <section class="slide cover" aria-labelledby="s32" hidden>
+        <p class="eyebrow">챕터 3 · PPT</p><h2 id="s32">대학생의 발표자료 만들기</h2>
+        <p class="lead">Codex에서 발표 내용과 디자인을 정하고<br>수정하기 쉬운 HTML 슬라이드로 만듭니다.</p>
+        <p>발표 계획 → 디자인 이미지 → HTML 수정 → 최종 이미지</p>
+      </section>
+
+      <!-- 33 이서연 씨의 교양 수업 발표 -->
+      <section class="slide" aria-labelledby="s33" hidden>
+        <p class="eyebrow">배경</p><h2 id="s33">이서연 씨의 교양 수업 발표</h2>
+        <div class="story">
+          <p>대학생 이서연 씨는 교양 수업에서<br>‘데이터 센터가 지역사회에 미치는 영향’을 주제로 5분간 발표합니다.</p>
+          <p>일자리와 지역경제에 대한 기대, 전력 사용과 환경에 대한 우려를 함께 살펴봅니다.<br>발표 내용은 정리했지만 슬라이드를 디자인하고 수정하는 일이 어렵습니다.</p>
+          <p>Codex에서 내용과 디자인 방향을 정하고,<br>수정하기 쉬운 HTML 발표자료로 만듭니다.</p>
+        </div>
+        <p class="footnote">이서연 씨는 수업을 위해 만든 가상의 인물입니다.</p>
+      </section>
+
+      <!-- 34 발표자료 제작 흐름과 준비물 -->
+      <section class="slide" aria-labelledby="s34" hidden>
+        <p class="eyebrow">개념·준비</p><h2 id="s34">발표자료 제작 흐름과 준비물</h2>
+        <table>
+          <thead><tr><th>만드는 것</th><th>역할과 준비</th></tr></thead>
+          <tbody><tr><th scope="row">발표 계획·디자인 PNG</th><td>Codex에서 내용을 정하고 imagegen으로 시안을 만듭니다.</td></tr><tr><th scope="row">HTML 슬라이드</th><td>Codex에서 글자·순서·배치를 수정하고 브라우저로 봅니다.</td></tr><tr><th scope="row">템플릿·최종 이미지</th><td>확정 후 imagegen으로 페이지별 이미지를 만듭니다.</td></tr></tbody>
+        </table>
+        <p>작업 폴더 ‘AI발표실습’을 만들고 Codex 프로젝트로 엽니다.<br>이미지 젠과 Template Creator를 준비합니다.</p>
+        <p><strong>설정</strong><br>계획: GPT-6.1 Sol · Light(라이트)<br>문서제작: GPT-6.1 Sol · Medium(중간) — 이미지·HTML 제작과 수정</p>
+        <p class="footnote">이번 실습의 편집 원본은 HTML입니다. 최종 PNG는 이미지이며 글자를 셀처럼 편집할 수 없습니다.<br>PPTX로 내보내는 실습은 이 과정에 포함하지 않습니다.</p>
+      </section>
+
+      <!-- 35 Codex에서 발표 계획 잡기 -->
+      <section class="slide practice" aria-labelledby="s35" hidden>
+        <p class="eyebrow">실습 1 · Codex · Light</p><h2 id="s35">주제와 페이지별 내용 정하기</h2>
+        <p>GPT-6.1 Sol · Light로 설정하고 주제·대상·시간을 알려 줍니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>‘데이터 센터가 지역사회에 미치는 영향’을 주제로 5분간 발표할 거야.<br>데이터 센터를 잘 모르는 대학생도 이해할 수 있게 8페이지로 구성해줘.<br>제목·목차·챕터 카드·개념·기대 효과·우려 사항·판단 기준·마무리 순서로 해줘.<br>각 페이지에 제목, 짧은 핵심 문장 2~3개, 발표 메모를 적어줘.<br>긍정적·부정적 영향을 균형 있게 설명하고, 지역별로 달라질 수 있는 점도 짚어줘.<br>통계와 사례에는 출처와 기준 연도를 적고, 확인되지 않은 정보는 사용하지 말아줘.</p>
+        </div>
+        <p class="note">결과 확인 · 페이지 수와 흐름을 읽고, 발표할 수 있는 분량으로 고칩니다.</p>
+      </section>
+
+      <!-- 36 2×2 디자인 미리보기 만들기 -->
+      <section class="slide practice" aria-labelledby="s36" hidden>
+        <p class="eyebrow">실습 2 · Codex · Medium</p><h2 id="s36">2×2 디자인 미리보기 만들기</h2>
+        <p>같은 Codex 대화에서 Medium으로 바꾸고 imagegen을 선택합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>imagegen으로 이 발표의 디자인 미리보기 이미지 한 장을 만들어줘.<br>제목 페이지·목차·챕터 카드·내용 페이지를 2×2로 배치해줘.<br>네 미리보기는 각각 16:9이고 같은 디자인을 사용해줘.<br>HTML/CSS로 구현하기 쉬운 디자인으로 해줘.<br>흰 배경·검은 글씨·연한 파랑 강조, 맑은 고딕 계열과 단순한 선을 써줘.<br>작은 글씨와 복잡한 장식은 줄이고 실제 발표 제목과 짧은 예시를 넣어줘.</p>
+        </div>
+        <p class="footnote">2×2는 디자인을 비교하는 한 장의 이미지입니다. 실제 발표 8페이지는 이후에 만듭니다.</p>
+      </section>
+
+      <!-- 37 디자인 수정 후 PNG 저장 -->
+      <section class="slide practice" aria-labelledby="s37" hidden>
+        <p class="eyebrow">실습 3 · Codex · Medium</p><h2 id="s37">디자인을 고치고 PNG로 저장하기</h2>
+        <ol class="actions"><li>4가지 화면의 글자 크기·여백·색상이 잘 맞는지 봅니다.</li><li>같은 대화에서 수정한 뒤 작업 폴더에 PNG로 저장하도록 요청합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>imagegen으로 이 미리보기의 제목을 키우고 본문 줄 수를 줄여줘.<br>색상과 배치 방향은 유지하고 네 화면의 여백을 맞춰줘.<br>각 16:9인 2×2 구성과 HTML/CSS로 구현하기 쉬운 디자인을 유지해줘.<br>수정한 이미지를 작업 폴더에 ‘발표_디자인.png’로 저장해줘.</p>
+        </div>
+        <p class="note">작업 폴더의 ‘발표_디자인.png’를 열어<br>네 화면이 모두 들어 있는지 확인합니다.</p>
+        <p class="footnote">생성된 이미지 원본을 저장합니다. 이 PNG를 HTML과 이미지 템플릿의 디자인 기준으로 사용합니다.</p>
+      </section>
+
+      <!-- 38 발표 내용과 디자인 확정하기 -->
+      <section class="slide practice" aria-labelledby="s38" hidden>
+        <p class="eyebrow">실습 4 · Codex · Medium</p><h2 id="s38">발표 내용과 디자인 확정하기</h2>
+        <ol class="actions"><li>같은 대화에서 발표 내용과 수정한 디자인을 확정합니다.</li><li>원고를 TXT로 저장하고, 각 페이지에 쓸 디자인을 정합니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>지금까지 정한 페이지별 제목·본문·발표 메모를 ‘발표계획.txt’로 저장해줘.<br>작업 폴더의 ‘발표_디자인.png’와 함께 확인해줘.<br>8페이지 각각에 제목·목차·챕터 카드·내용 중 어떤 디자인을 쓸지 알려줘.<br>빠진 자료가 있으면 알려줘. 원고는 요약하거나 새로 쓰지 말아줘.</p>
+        </div>
+        <p class="footnote">작업 폴더에 TXT와 PNG가 모두 저장되었는지 확인합니다. 새 대화에서는 두 파일을 첨부합니다.</p>
+      </section>
+
+      <!-- 39 디자인을 따른 HTML과 접속 주소 만들기 -->
+      <section class="slide practice" aria-labelledby="s39" hidden>
+        <p class="eyebrow">실습 5 · Codex · Medium</p><h2 id="s39">디자인을 따른 HTML 슬라이드 만들기</h2>
+        <p>작업 폴더에 저장한 발표 내용과 디자인 이미지를 기준으로 요청합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>작업 폴더의 ‘발표계획.txt’와 ‘발표_디자인.png’로 8페이지를 만들어줘.<br>이미지의 색상·글꼴·배치를 바탕으로 16:9 HTML 슬라이드로 구현해줘.<br>새 디자인을 임의로 정하지 말고, 제목·본문은 확정 내용을 유지해줘.<br>이미지와 같은 글꼴이 없으면 비슷한 글꼴을 쓰고 차이를 알려줘.<br>이전·다음·페이지 선택·전체화면을 넣고 작업 폴더에 저장해줘.<br>완성한 HTML을 로컬 서버로 실행하고 브라우저에서 볼 수 있는 접속 주소를 알려줘.</p>
+        </div>
+        <p class="footnote">실행 후 Codex가 알려 준 실제 접속 주소를 엽니다. 디자인 PNG를 통째로 붙이는 방식이 아닙니다.</p>
+      </section>
+
+      <!-- 40 브라우저를 보며 필요한 부분 수정하기 -->
+      <section class="slide practice" aria-labelledby="s40" hidden>
+        <p class="eyebrow">실습 6 · 브라우저 확인</p><h2 id="s40">문구·순서·배치 수정하기</h2>
+        <p>접속 주소를 열어 8페이지를 넘겨 보고, 고칠 페이지를 정합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>브라우저에서 보니 4페이지 본문이 길어.<br>핵심 뜻을 유지하며 두 문장으로 줄이고 제목 아래 여백을 넓혀줘.<br>5페이지와 6페이지의 순서를 바꿔줘.<br>‘발표_디자인.png’의 색상·글꼴·배치는 유지해줘.<br>수정한 페이지를 브라우저에서 확인하고 접속 주소를 다시 알려줘.</p>
+        </div>
+        <p class="note">HTML은 필요한 문구와 배치만 빠르게 고칠 수 있습니다.<br>매번 이미지 전체를 다시 생성하는 시간과 사용량을 줄일 수 있습니다.</p>
+        <p class="footnote">실제 시간·사용량은 수정 범위와 도구에 따라 달라집니다. 비용 절감을 보장하지는 않습니다.</p>
+      </section>
+
+      <!-- 41 내용과 화면 최종 확정 -->
+      <section class="slide practice" aria-labelledby="s41" hidden>
+        <p class="eyebrow">실습 7 · 최종 확정</p><h2 id="s41">발표 내용과 화면 확정하기</h2>
+        <ol class="actions"><li>8페이지를 순서대로 읽으며 5분 발표를 연습합니다.</li><li>빠진 내용·오탈자·잘림과 원래 디자인의 일관성을 확인합니다.</li><li>최종 HTML과 페이지별 확정 원고를 작업 폴더에 남깁니다.</li></ol>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>지금 HTML의 내용과 순서를 최종안으로 정할게.<br>각 페이지의 제목·본문을 그대로 뽑아 ‘최종원고.txt’로 저장해줘.<br>페이지 번호와 디자인 유형도 적고, 원문을 요약하거나 새로 쓰지 말아줘.<br>HTML과 연결된 파일을 작업 폴더에 함께 보관해줘.</p>
+        </div>
+        <p class="footnote">다음 이미지 제작에서도 이 확정 원고와 HTML 화면을 기준으로 사용합니다.</p>
+      </section>
+
+      <!-- 42 처음 만든 PNG로 이미지 템플릿 등록 -->
+      <section class="slide practice" aria-labelledby="s42" hidden>
+        <p class="eyebrow">실습 8 · Template Creator</p><h2 id="s42">미리보기 PNG를 이미지 템플릿으로</h2>
+        <p>Codex에서 만든 ‘발표_디자인.png’ 한 장을 첨부합니다.<br><a href="plugin://template-creator@openai-primary-runtime">Template Creator</a>를 선택해 개인 이미지 템플릿으로 등록합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>Template Creator로 첨부 PNG 한 장을 재사용할 이미지 템플릿으로 등록해줘.<br>표시 이름은 ‘데이터 센터 발표’로 해줘.<br>imagegen용이며 네 화면의 색상·글꼴·배치와 16:9 비율을 참고하게 해줘.<br>사용할 때는 해당 페이지 유형 하나만 한 장에 만들도록 해줘.<br>등록이 끝나면 템플릿 카드와 실제 스킬 이름, 사용 방법을 알려줘.</p>
+        </div>
+        <p class="footnote">등록 완료 카드가 나와야 완료입니다. PNG를 첨부하거나 이름만 정한 것으로 등록되지 않습니다.<br>이 템플릿은 개인 스킬로 보관되며, 새 플러그인을 배포하는 과정이 아닙니다.</p>
+      </section>
+
+      <!-- 43 등록 템플릿으로 첫 이미지 만들기 -->
+      <section class="slide practice" aria-labelledby="s43" hidden>
+        <p class="eyebrow">실습 9 · 이미지 젠</p><h2 id="s43">등록 템플릿으로 첫 장 만들기</h2>
+        <p>imagegen을 선택해 템플릿 갤러리에서 ‘데이터 센터 발표’를 고릅니다.<br>또는 등록 때 안내된 실제 스킬을 선택합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · 템플릿을 선택한 뒤</h3>
+          <p>선택한 이미지 템플릿과 작업 폴더의 최종원고.txt·HTML을 참고해줘.<br>확정된 HTML의 1페이지 화면도 확인해줘.<br>imagegen으로 1페이지 제목 슬라이드 이미지를 16:9로 만들어줘.<br>제목과 본문은 최종원고 그대로 쓰고 요약하거나 추가하지 말아줘.<br>2×2 미리보기 대신 제목 페이지 한 장만 생성해줘.<br>작업 폴더에 ‘최종슬라이드_01.png’로 저장해줘.</p>
+        </div>
+        <p class="footnote">HTML 캡처는 화면 참고 자료이고, 최종 결과는 이미지 젠으로 새로 생성한 이미지입니다.</p>
+      </section>
+
+      <!-- 44 나머지 페이지를 각각 16:9로 생성 -->
+      <section class="slide practice" aria-labelledby="s44" hidden>
+        <p class="eyebrow">실습 10 · 페이지별 이미지 제작</p><h2 id="s44">나머지 페이지도 한 장씩 만들기</h2>
+        <p>첫 장의 디자인과 문구를 확인한 뒤 같은 템플릿을 다시 선택합니다.</p>
+        <div class="prompt"><h3>예시 프롬프트 · Codex</h3>
+          <p>같은 등록 이미지 템플릿으로 2~8페이지를 imagegen으로 만들어줘.<br>최종 HTML의 각 페이지 내용·화면과 최종원고.txt를 함께 참고해줘.<br>목차·챕터 카드·내용에 맞는 디자인 유형을 적용해줘.<br>제목·본문을 그대로 유지하고 각 페이지를 별도 16:9 PNG로 생성해줘.<br>HTML 캡처를 최종 이미지로 대신하지 말고, 여러 페이지를 한 장에 합치지 말아줘.<br>작업 폴더에 ‘최종슬라이드_02.png’부터 ‘최종슬라이드_08.png’로 저장해줘.</p>
+        </div>
+        <p class="footnote">한 번에 모두 생성되지 않으면 남은 페이지 번호를 지정해 이어서 요청합니다.</p>
+      </section>
+
+      <!-- 45 최종 이미지 검수와 결과 확인 -->
+      <section class="slide practice" aria-labelledby="s45" hidden>
+        <p class="eyebrow">결과 확인</p><h2 id="s45">최종 이미지의 글자와 숫자 확인하기</h2>
+        <ol class="actions"><li>PNG 8장을 열어 순서와 각 이미지의 16:9 비율을 확인합니다.</li><li>HTML·최종원고와 대조해 글자·숫자·빠진 문장을 검사합니다.</li><li>발표 화면 크기에서 가독성·잘림·여백을 확인합니다.</li></ol>
+        <div class="prompt"><h3>오류가 있는 페이지 수정 예시 · Codex</h3>
+          <p>최종슬라이드_04.png의 본문에 오탈자가 있어.<br>최종원고.txt의 해당 페이지 제목과 본문을 그대로 사용해줘.<br>imagegen으로 그 페이지만 수정하고 템플릿 디자인과 16:9를 유지해줘.<br>작업 폴더에 ‘최종슬라이드_04_수정.png’로 저장해줘.</p>
+        </div>
+        <p class="footnote">결과물 · 수정 가능한 HTML, 최종원고 TXT, 등록한 이미지 템플릿, 페이지별 PNG 8장<br>이미지 생성은 글자를 바꿀 수 있으므로 수정한 이미지도 다시 검수합니다.</p>
+      </section>
+    </div>
+  </main>
+  <nav class="controls" aria-label="발표 조작">
+    <button id="previous" type="button">← 이전</button>
+    <label for="page">페이지</label>
+    <select id="page" aria-label="페이지 선택"></select>
+    <span id="page-count" aria-live="polite"></span>
+    <button id="next" type="button">다음 →</button>
+    <button id="fullscreen" type="button">전체화면</button>
+    <span class="key-help">좌우 방향키 · F 전체화면</span>
+  </nav>
+  <p id="status" role="status"></p>
+</body>
+</html>
+
+

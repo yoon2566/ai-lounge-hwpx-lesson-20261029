@@ -1,0 +1,15 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/*.hwpx
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment
+
+/*.hwp
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment
+
+/*.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment

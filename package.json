@@ -1,0 +1,13 @@
+{
+  "name": "ai-lounge-hwpx-lesson-20261029",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.156.1"
+  }
+}
